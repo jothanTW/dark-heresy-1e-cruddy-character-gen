@@ -12,12 +12,13 @@ function onInputHandler() {
 }
 
 function refresh(useId) {
-    let s = useId ? "?id=" + document.getElementById("idField").value : "";
-    window.location.search = s; // firefox
-    window.location.reload();
-    if (window.chrome) {// chrome
-        window.location.search = s; 
+    let params = new URL(window.location.href);
+    if (useId) {
+        params.searchParams.set("id", document.getElementById("idField").value);
+    } else {
+        params.searchParams.delete("id");
     }
+    window.location.href = params.href;
 }
 
 function isValidInput(inp) {
