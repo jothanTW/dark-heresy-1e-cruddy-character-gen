@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+        <script src="tables.js"></script>
+        <script src="index.js"></script>
+        <script src="controls.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="init();setElement();">
+        <div class="button-list">
+            ID: <input type="text" maxlength="8" id="idField" onInput="onInputHandler()">
+            <button id="characterButton" onClick="refresh(true)">Go To Character</button>
+            <button onClick="refresh(false)">Random Character</button>
+        </div>
+        <br>
+        <div id="nameField"></div>
+        <div><span id="genderField"></span>&nbsp;<span id="homeworldField"></span></div>
+        <br>
+        <div>Health: <span id="woundsField"></span></div>
+        <div>Fate Points: <span id="fatePointsField"></span></div>
+        <br>
+        <div class="stat-table">
+            <div class="names">
+                <span>W. Skill</span>
+                <span>B. Skill</span>
+                <span>Strength</span>
+                <span>Toughness</span>
+                <span>Agility</span>
+                <span>Intelligence</span>
+                <span>Perception</span>
+                <span>Willpower</span>
+                <span>Fellowship</span>
+            </div>
+            <div class="stats">
+                <span id="wsSkillField"></span>
+                <span id="bsSkillField"></span>
+                <span id="strengthField"></span>
+                <span id="toughnessField"></span>
+                <span id="agilityField"></span>
+                <span id="intelligenceField"></span>
+                <span id="perceptionField"></span>
+                <span id="willpowerField"></span>
+                <span id="fellowshipField"></span>
+            </div>
+        </div>
+        <br>
+        <div>SKILLS</div>
+        <div class="list" id="skillsList"></div>
+        <br>
+        <div>EQUIPMENT</div>
+        <div class="list" id="equipmentList"></div>
+        <br>
+        <div class="divination" id="divinationField"></div>
+    </body>
+</html>

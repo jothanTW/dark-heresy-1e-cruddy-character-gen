@@ -1,0 +1,35 @@
+html {
+    margin:10px;
+}
+
+input, button, html {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+.stat-table {
+    display: flex;
+}
+
+.stat-table .names ::after {
+    content: ':';
+    padding-right: 15px;
+}
+
+.stat-table .stats, .stat-table .names {
+    display: flex;
+    flex-direction: column;
+}
+
+.divination {
+    font-style: italic;
+}
+
+.divination::before, .divination::after {
+    content: "\"";
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
